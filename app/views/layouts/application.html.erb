@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Janani's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <style>
+      .hire-dialog {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: linear-gradient(135deg, #ff69b4, #00bfff);
+        color: white;
+        padding: 20px 25px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        font-size: 1.1rem;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        z-index: 9999;
+        animation: popUp 0.4s ease;
+      }
+
+      .hire-dialog a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .hire-dialog button {
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 10px;
+      }
+
+      @keyframes popUp {
+        0% { transform: translateY(50px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVIGATION BAR -->
+    <div class="navbar">
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <%= yield %>
+
+    <!-- Prompt Box -->
+    <div id="hirePrompt" class="hire-dialog">
+      <p>🚀 Janani is open to exciting roles!<br><a href="/contact">Let’s connect!</a></p>
+      <button onclick="closeHirePrompt()">×</button>
+    </div>
+
+    <!-- Script to show prompt after 5 seconds -->
+    <script>
+      setTimeout(() => {
+        const prompt = document.getElementById("hirePrompt");
+        prompt.style.display = "flex";
+      }, 5000);
+
+      function closeHirePrompt() {
+        document.getElementById("hirePrompt").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

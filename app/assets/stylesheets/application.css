@@ -1,0 +1,354 @@
+body {
+  background-color: #000 !important; /* pure black */
+  color: #fff;                       /* text stays readable */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.portfolio {
+  margin-top: 80px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #111;
+  padding: 40px;
+  text-align: center;
+}
+
+.header .title {
+  font-size: 3.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.header .highlight {
+  color: black;
+}
+.header .year {
+  font-size: 1em;
+  vertical-align: super;
+}
+
+.name {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.intro {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.id-card img {
+  width: 140px;
+  border: 3px solid #eee;
+  border-radius: 10px;
+  transform: rotate(-5deg);
+}
+.info {
+  max-width: 600px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #222;
+}
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+.col h3 {
+  margin-bottom: 10px;
+}
+.col ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.95em;
+}
+.col ul li a {
+  color: #333;
+  text-decoration: none;
+}
+.col ul li a:hover {
+  text-decoration: underline;
+}
+.icons img {
+  height: 24px;
+  margin-right: 8px;
+}
+
+/* CONTENT section */
+.projects {
+  margin-top: 60px;
+}
+.content-label {
+  font-size: 4em;
+  color: #fff;  /* ⬅️ Changed to white */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  width: 120px;
+  height: 180px;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card1 { background: #6ca0dc; }
+.card2 { background: #ddd1c7; color: #000; }
+.card3 { background: #91b598; }
+.card4 { background: #db5555; }
+.card5 { background: #333; }
+
+.avatar {
+  width: 750px;                /* ⬅️ Increased size */
+  height: auto;
+  border-radius: 50%;          /* Fully round */
+  box-shadow: none;
+  margin-bottom: 35px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out;
+  background-color: transparent;
+  mix-blend-mode: lighten;     /* Helps it blend with black */
+}
+
+.avatar:hover {
+  transform: scale(1.05);     /* Zoom effect on hover */
+}
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #444;
+}
+
+.section ul {
+  padding-left: 18px;
+}
+
+.section code {
+  background-color: #eee;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 90%;
+  color: #c7254e;
+}
+
+.tools img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+.float-icons {
+  display: inline-block;
+  animation: float 2.5s ease-in-out infinite;
+  font-size: 0.8em;
+  padding: 0 10px;
+}
+
+.float-icons:first-child {
+  animation-delay: 0s;
+}
+.float-icons:last-child {
+  animation-delay: 1.25s;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+/* === Navbar Fix === */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-size: 1.7rem;
+  font-family: 'Montserrat', sans-serif;   /* 👈 Stylish font */
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #00bfff; /* Brighter hover */
+}
+
+.main-content {
+  padding-top: 100px; /* Creates vertical space below fixed navbar */
+  margin-left: 30px;   /* Optional: aligns left side with nav */
+  max-width: 900px;
+}
+.about-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffb6c1; /* baby pink */
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+.projects-section {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #111;
+  border-radius: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+}
+
+.project-box {
+  width: 180px;
+  height: 180px;
+  background-color: #6ca0dc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white;
+  flex-shrink: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project-description {
+  color: #eee;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-family: 'Roboto', sans-serif;
+}
+
+.project-description h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.hire-dialog {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #111, #222);
+  color: #fff;
+  border: 2px solid #00bfff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  z-index: 10000;
+  box-shadow: 0 0 25px rgba(0,191,255,0.4);
+  font-family: 'Poppins', sans-serif;
+  animation: slideIn 0.6s ease forwards;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  max-width: 300px;
+}
+
+.hire-dialog p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.hire-dialog a {
+  color: #00ffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hire-dialog a:hover {
+  text-decoration: underline;
+}
+
+.hire-dialog button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+

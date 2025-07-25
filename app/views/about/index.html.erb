@@ -1,0 +1,112 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+  .about-wrapper {
+    background: linear-gradient(to bottom, #000, #111);
+    min-height: 100vh;
+    padding: 100px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    animation: fadeIn 1s ease;
+  }
+
+  .about-title {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+    background: linear-gradient(90deg, #ffb6c1, #db70db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  .about-section {
+    background-color: #fff;
+    color: #222;
+    padding: 30px 30px;
+    margin: 30px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 1s ease;
+  }
+
+  .about-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 35px rgba(255, 255, 255, 0.1);
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+  }
+
+  .about-section ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .about-section ul li {
+    margin-bottom: 8px;
+  }
+
+  .emoji {
+    font-size: 1.5rem;
+  }
+
+  @keyframes glow {
+    0% { text-shadow: 0 0 5px #ffb6c1; }
+    100% { text-shadow: 0 0 18px #db70db; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes fadeUp {
+    0%   { transform: translateY(40px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @media (max-width: 768px) {
+    .about-title { font-size: 2.3rem; }
+    .about-section { padding: 25px 20px; }
+  }
+</style>
+
+<div class="about-wrapper">
+  <h1 class="about-title">About Me 👩🏻‍💻</h1>
+
+  <div class="about-section">
+    <h2><span class="emoji">👩🏻‍💻</span> Who Am I?</h2>
+    <p>
+      I’m Janani — an automation engineer who thrives in building smart, clean testing systems. 
+      From scripting regression frameworks to debugging hardware, I bring precision and passion to every step.
+    </p>
+  </div>
+
+  <div class="about-section">
+    <h2><span class="emoji">🛠️</span> Technical Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> Ruby, Python, Shell, Bash</li>
+      <li><strong>Tools:</strong> Capybara, Cucumber, Gherkin, RSpec, Watir</li>
+      <li><strong>Platforms:</strong> Linux, Intel Xeon, Firmware systems</li>
+    </ul>
+  </div>
+
+  <div class="about-section">
+    <h2><span class="emoji">🌟</span> My Belief</h2>
+    <p>
+      I design automation not just to test, but to empower teams. 
+      My goal is to build tools that are scalable, readable, and intuitive.
+    </p>
+  </div>
+</div>

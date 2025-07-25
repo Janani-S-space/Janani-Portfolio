@@ -1,0 +1,124 @@
+<style>
+  .project-section {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .project-heading {
+    text-align: center;
+    font-size: 3.2rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+  }
+
+  .project-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .project-block:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .project-card {
+    width: 180px;
+    height: 220px;
+    border-radius: 15px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+
+  .card1 { background: #6ca0dc; }
+  .card2 { background: #ddd1c7; color: #000; }
+  .card3 { background: #91b598; }
+  .card4 { background: #db5555; }
+  .card5 { background: #333; }
+  .card6 { background: #6ca0dc; }
+
+  .description {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+  }
+</style>
+
+<div class="project-section">
+  <h2 class="project-heading">💻 Projects</h2>
+
+  <div class="project-block">
+    <div class="project-card card1">
+      <h3>01</h3>
+      <p>Intel Xeon Platform Validation</p>
+    </div>
+    <div class="description">
+      In my role validating Intel Xeon platforms, I was responsible for building and executing automation frameworks to test power, thermal, and functional features across pre- and post-silicon environments. I collaborated closely with firmware and hardware teams to debug system-level issues and ensure platform stability. Using tools like BMC, IPMI, and serial logs, I performed detailed root cause analysis and regression testing. My scripting skills in Ruby and Python enabled the creation of scalable, reusable validation tools that accelerated test coverage. This work ensured each firmware and BIOS release met the performance and compliance standards required for production.
+    </div>
+  </div>
+
+  <div class="project-block">
+    <div class="project-card card2">
+      <h3>02</h3>
+      <p>BMC Automation Framework</p>
+    </div>
+    <div class="description">
+      Designed and implemented a Ruby-based automation framework using Cucumber, Gherkin, and Capybara to validate BMC firmware. Automated IPMI, Redfish, and sensor-related test flows with scalable and reusable step definitions. Integrated logs and health-check validations for better debugging and traceability. Improved test coverage across different platforms with environment-agnostic scripting. Collaborated with validation and firmware teams to continuously enhance framework efficiency.    </div>
+  </div>
+
+  <div class="project-block">
+    <div class="project-card card3">
+      <h3>03</h3>
+      <p>Pynodes Infra Development</p>
+    </div>
+    <div class="description">
+In the Pynodes Infra Development project, I created Python-based automation scripts to monitor internal systems, perform routine infrastructure checks, and report service health. I developed command-line tools to simplify log handling, system diagnostics, and disk usage alerts. These tools were modular and cron-integrated, enabling efficient scheduling and execution. My focus was on increasing backend reliability and reducing manual intervention. I also collaborated with the DevOps team to ensure stable deployments and rapid fault detection.    </div>
+  </div>
+
+  <div class="project-block">
+    <div class="project-card card4">
+      <h3>04</h3>
+      <p>Graphics Driver Testing</p>
+    </div>
+    <div class="description">
+In the Graphics Driver Testing project, I was responsible for validating GPU functionalities across various hardware platforms. I developed automation scripts to test driver stability, performance benchmarks, and rendering accuracy. My role involved identifying compatibility issues, logging defects, and working closely with development teams for resolution. I also contributed to building reusable test modules that accelerated regression cycles. The goal was to ensure smooth graphics performance and compliance with system standards across multiple OS environments.    </div>
+  </div>
+
+  <div class="project-block">
+    <div class="project-card card5">
+      <h3>05</h3>
+      <p>Thermal & Firmware Automation</p>
+    </div>
+    <div class="description">
+In the Thermal & Firmware Automation project, I automated critical tests to monitor system temperature, power behavior, and firmware responses during various workloads. Using Ruby and shell scripting, I built scalable test frameworks that detected thermal throttling and validated BIOS/firmware settings. My contributions helped streamline validation cycles and ensured consistent system behavior under stress. I also worked on automating firmware update flows and logging diagnostics for failure analysis. This automation significantly reduced manual testing efforts and improved test coverage.
+    </div>
+  </div>
+
+  <div class="project-block">
+    <div class="project-card card6">
+      <h3>06</h3>
+      <p>Power Feature Monitoring</p>
+    </div>
+    <div class="description">
+In the Power Feature Monitoring project, I focused on automating validation for system power states, transitions, and low-power modes across different platforms. I developed Ruby-based scripts to capture real-time power metrics and verify compliance with platform power policies. The framework was integrated with Cucumber for BDD-style reporting, helping identify anomalies early in the cycle. My work contributed to energy efficiency analysis, ensuring optimal hardware behavior across idle and active states. These efforts played a key role in meeting platform power targets.    </div>
+  </div>
+</div>

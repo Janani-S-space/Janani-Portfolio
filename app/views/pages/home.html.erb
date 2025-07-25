@@ -1,0 +1,29 @@
+<style>
+  .float-icons {
+    display: inline-block;
+    animation: float 2.5s ease-in-out infinite;
+    font-size: 0.8em;
+    padding: 0 10px;
+    border: 2px solid red; /* TEST LINE */
+  }
+
+  .float-icons:first-child {
+    animation-delay: 0s;
+  }
+
+  .float-icons:last-child {
+    animation-delay: 1.25s;
+  }
+
+  @keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+</style>
+
+<h2 class="content-label" style="text-align: center; font-size: 4em; color: #000; font-weight: 700;">
+  <span class="float-icons">🧠</span>
+  CONTENT
+  <span class="float-icons">🧠</span>
+</h2>
