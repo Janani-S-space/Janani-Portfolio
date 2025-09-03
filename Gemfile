@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "rails", "~> 7.1.3"
 gem "propshaft"
-gem "pg", "~> 1.5"                      # ✅ For PostgreSQL in production
+gem "pg", "~> 1.6"                      # ✅ For PostgreSQL in production
 gem "puma", ">= 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
