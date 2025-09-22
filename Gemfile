@@ -20,7 +20,7 @@ gem "thruster", require: false
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 group :development, :test do
-  gem "sqlite3", "~> 1.6.9"             # ✅ Keep SQLite only for dev & test
+  gem "sqlite3", "~> 2.7.4"             # ✅ Keep SQLite only for dev & test
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false
